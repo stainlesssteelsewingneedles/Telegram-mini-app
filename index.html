@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding Blessing</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root {
+      --bg-light: #FFF8E7;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #eaeaea;
+      --accent: #4CAF50;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fdf1c6;
+    }
+
+    body.dark header, body.dark footer {
+      background-color: #2b2b2b;
+    }
+
+    main {
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.7em 1.4em;
+      margin-top: 0.5em;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .lang {
+      margin-top: 0.3em;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    body.dark .lang {
+      color: #aaa;
+    }
+
+    .note {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    body.dark .note {
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Wedding Blessing Page</h1>
+    <p>감사합니다. 함께해 주셔서 진심으로 기쁩니다.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>💌 A Note from Us</h2>
+      <p>We are starting a life together that we pray will be marked by simplicity, faith, stewardship, and hospitality. We are honored to invite you to bless us in ways that are meaningful and helpful.</p>
+      <p class="lang">저희는 단순함과 믿음, 청지기 정신, 그리고 환대가 깃든 삶을 함께 시작하려 합니다. 의미 있고 도움이 되는 방식으로 저희를 축복해 주신다면 큰 영광입니다.</p>
+    </section>
+
+    <section>
+      <h2>💵 Generosity</h2>
+      <ul>
+        <li>Bogeum’s continued visa processing fees ($1.5k)</li>
+        <li>Furnishment of a guest room</li>
+        <li>A trip to Korea to celebrate our marriage with Bo's family</li>
+      </ul>
+      <p class="lang">
+        - 보금이의 비자 절차 진행 비용 ($1,500)<br>
+        - 손님방 가구 마련<br>
+        - 보금이 가족과의 결혼 축하를 위한 한국 방문
+      </p>
+      <a class="button" href="https://paypal.me/yourlink" target="_blank">Give via PayPal</a>
+      <a class="button" href="https://venmo.com/yourhandle" target="_blank">Give via Venmo</a>
+    </section>
+
+    <section>
+      <h2>🏠 Home Essentials</h2>
+      <ul>
+        <li>One beautiful serving dish</li>
+        <li>A good cast iron pan</li>
+        <li>Handwritten recipe cards</li>
+        <li>A favorite book or heirloom item</li>
+      </ul>
+      <p class="lang">
+        - 예쁜 서빙 접시 하나<br>
+        - 좋은 무쇠 팬<br>
+        - 손글씨 요리 레시피<br>
+        - 좋아하시는 책이나 소중한 유산품
+      </p>
+      <a class="button" href="https://forms.gle/yourform" target="_blank">Suggest or Give an Heirloom</a>
+    </section>
+
+    <section>
+      <h2>📖 Wisdom and Blessings</h2>
+      <p>We’d love to receive a verse, memory, or note of advice.</p>
+      <p class="lang">말씀 한 구절이나, 조언, 따뜻한 이야기를 보내주세요.</p>
+      <a class="button" href="mailto:youremail@example.com">Send Us a Letter</a>
+    </section>
+
+    <section>
+      <h2>📬 Mailing Address</h2>
+      <p>5103 S Sheridan Rd #134<br>Tulsa, OK 74145</p>
+      <p class="lang">오클라호마 털사<br>5103 S Sheridan Rd #134</p>
+    </section>
+
+    <section>
+      <h2>🌍 Bridging Cultures</h2>
+      <p class="note">In Korean tradition, cash gifts are common. In American weddings, registries are typical. This page honors both.</p>
+      <p class="lang note">한국에서는 축의금 문화가 일반적이고, 미국에서는 보통 선물 목록을 만듭니다. 이 페이지는 두 문화를 함께 존중합니다.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>With love,<br>Robbie & Bogeum</p>
+  </footer>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    if (tg.colorScheme === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+</body>
+</html>
